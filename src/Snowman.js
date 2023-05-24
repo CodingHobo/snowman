@@ -62,7 +62,7 @@ function Snowman({
   /** generateButtons: return array of letter buttons to render */
   function generateButtons() {
     return "abcdefghijklmnopqrstuvwxyz".split("").map(ltr => (
-        <button
+        <button class={ltr}
             key={ltr}
             value={ltr}
             onClick={handleGuess}
@@ -76,6 +76,10 @@ function Snowman({
   return (
       <div className="Snowman">
         <img src={(images)[nWrong]} alt={nWrong} />
+        {/* {nWrong >= maxWrong &&
+<p>Game over!</p>
+        } */}
+        <p>Number wrong: {nWrong}</p>
         <p className="Snowman-word">{guessedWord()}</p>
         <p>{generateButtons()}</p>
       </div>

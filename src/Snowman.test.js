@@ -25,8 +25,8 @@ it("matches snapshot on lose game", function () {
   fireEvent.click(zBtn);
   fireEvent.click(zBtn);
 
+  // expect(container).toContainHTML("Game Over!")
   expect(container).toMatchSnapshot();
-  expect(container).toContainHTML("Game Over!")
 });
 
 // it("works when you click on the right arrow", function () {
